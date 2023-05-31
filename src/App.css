@@ -1,0 +1,108 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ /* 全体のスタイル */
+ body {
+    font-family: "Helvetica Neue", Arial, "hiragino kaku gothic pro", meiryo,sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #eee;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 120px;
+ }
+ 
+ /* headerのスタイル */
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+ }
+ 
+ h1 {
+    font-size: 24px;
+    font-weight: bold;
+ }
+
+ .header_title{
+    text-decoration:none rgb(0, 0, 0);
+} 
+ .gnavi__pc-style ul {
+    display: flex;
+    list-style: none;
+    margin-left:350px;
+ }
+ 
+ .gnavi__pc-style li {
+    margin-left: 100px;
+ }
+ 
+ .gnavi__pc-style a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s ease;
+ }
+ 
+ .gnavi__pc-style a:hover {
+    color: #007bff;
+ }
+ 
+ /* mainのスタイル */
+ main {
+    margin: 80px auto 0 auto;
+    max-width: 900px;
+ }
+ 
+ section {
+    padding: 40px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+ }
+ 
+ h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+ }
+ 
+ ul {
+    list-style: none;
+ }
+ 
+ 
+ h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+ 
+ /* footerのスタイル */
+ footer {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+
