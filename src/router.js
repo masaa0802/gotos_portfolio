@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home.js';
-import List from './pages/list.js';
+import Blog from './pages/blog.js';
 import Product from './pages/product.js';
 import Profile from './pages/profile.js';
 import Header from './components/header.js';
@@ -15,7 +15,7 @@ const router = () => {
             <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/list" element={<List />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/profile" element={<Profile />} />
                 </Routes>

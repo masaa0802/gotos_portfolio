@@ -4,11 +4,11 @@ const header = () => {
     return (
         <div>
             <header>
-                <h1><NavLink to="/" className="header_title" >GOTO's PORTFOLIO</NavLink></h1>
+                <NavLink to="/" className="header_title" ><h1>GOTO's PORTFOLIO</h1><p>ーエンジニアの部屋ー</p></NavLink>
                 <nav className="gnavi__pc-style">
                     <ul>
                         <li><NavLink to="/product" className="product" >開発物</NavLink></li>
-                        <li><NavLink to="/list" className="list" >記事</NavLink></li>
+                        <li><NavLink to="/blog" className="list" >ブログ</NavLink></li>
                         <li><NavLink to="/profile" className="profile" >プロフィール</NavLink></li>
                     </ul>
                 </nav>
