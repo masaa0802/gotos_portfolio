@@ -11,11 +11,11 @@
  body {
     font-family: 'DotGothic16', sans-serif;
     font-size: 16px;
-    color: #ffffff;
-    background-color: #ffffff;
+    color: #000000;
+    background-color: #cccccc;
     position: relative;
     min-height: 100vh;
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 120px;
  }
  
@@ -105,6 +105,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    color: #ffffff;
     background-color: #000000;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     position: absolute;
@@ -114,3 +115,57 @@
     right: 0;
  }
 
+ /* cardのスタイル */
+
+ .items{
+    padding: 50px 0px 0px 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 3rem;
+ }
+
+ .card{
+    width: 288px;
+    height: auto;
+  }
+  .card__imgframe{
+    width: 100%;
+    padding-top: 56.25%;
+    background: url(https://placehold.jp/640x360.png) no-repeat center;
+    background-size: cover;
+    box-sizing: border-box;
+    max-height: 350px;
+  }
+  .card__textbox{
+    width: 100%;
+    height: auto;
+    padding: 20px 18px;
+    background: #ffffff;
+    box-sizing: border-box;
+  }
+  .card__textbox > * + *{
+    margin-top: 10px;
+  }
+  .card__titletext{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+  }
+  .card__overviewtext{
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .card-skin{
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+  }
+
+  /* sideのスタイル */
+  .side{
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid;
+    border-color: #8a8a8a77;
+  }
