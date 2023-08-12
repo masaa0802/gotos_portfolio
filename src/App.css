@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 /* リセットCSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
- 
- /* 全体のスタイル */
- body {
-    font-family: 'DotGothic16', sans-serif;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: "DotGothic16", sans-serif;
     font-size: 16px;
     color: #000000;
     background-color: #cccccc;
@@ -17,149 +17,186 @@
     min-height: 100vh;
     padding-top: 100px;
     padding-bottom: 120px;
- }
- 
- /* headerのスタイル */
- header {
+}
+
+/* headerのスタイル */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #000000;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
- }
- 
- h1 {
+}
+
+h1 {
     font-size: 24px;
     font-weight: bold;
- }
+}
 
- .header_title{
+.header_title {
     color: #ffffff;
-    text-decoration:none rgb(0, 0, 0);
+    text-decoration: none rgb(0, 0, 0);
     padding-left: 30px;
- }
+}
 
 .gnavi__pc-style nav {
     padding: 30px;
 }
- .gnavi__pc-style ul {
+
+.gnavi__pc-style ul {
     display: flex;
     list-style: none;
     padding-right: 30px;
- }
- 
- .gnavi__pc-style li {
+}
+
+.gnavi__pc-style li {
     margin-left: 100px;
- }
- 
- .gnavi__pc-style a {
+}
+
+.gnavi__pc-style a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     transition: 0.3s ease;
- }
- 
- .gnavi__pc-style a:hover {
+}
+
+.gnavi__pc-style a:hover {
     color: #007bff;
- }
- 
- /* mainのスタイル */
- main {
+}
+
+/* mainのスタイル */
+main {
     margin: 80px auto 0 auto;
     max-width: 900px;
- }
- 
- section {
+}
+
+section {
     padding: 40px 20px;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
- }
- 
- h2 {
+}
+
+h2 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
- }
- 
- ul {
+}
+
+ul {
     list-style: none;
- }
- 
- 
- h3 {
+}
+
+h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
- }
- 
- /* footerのスタイル */
- footer {
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-    color: #ffffff;
-    background-color: #000000;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    position: absolute;
-    height: 80px;
-    bottom: 0;
-    left: 0;
-    right: 0;
- }
+}
 
- /* cardのスタイル */
+/* contentsのスタイル */
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  
+  .items {
+    flex-basis: 80%;
+  }
+  /* sideのスタイル */
+  .side {
+    flex-basis: 20%;
+    border-left: groove;
+    padding-left: 30px;
+  }
+  .about_img {
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    margin-left: 30px;
+  }
+  .Twitter{
+    padding: 10px;
+  }
+  .TwitterImg{
+    height: 30px;
+    width: 30px;
+    padding-right: 5px;
+  }
+  .TwitterName{
+    padding-right: 5px;
+  }
+/* cardのスタイル */
 
- .items{
-    padding: 50px 0px 0px 150px;
+.items {
+    padding-left: 60px;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 3rem;
     display: flex;
     flex-wrap: wrap;
- }
+}
 
- .card{
+.card {
     width: 288px;
     height: auto;
-  }
-  .card__imgframe{
+}
+
+.card__imgframe {
     width: 100%;
     padding-top: 56.25%;
     /* background: url(https://placehold.jp/640x360.png) no-repeat center; */
     background-size: cover;
     box-sizing: border-box;
     max-height: 350px;
-  }
-  .card__textbox{
+}
+
+.card__textbox {
     width: 100%;
     height: auto;
     padding: 20px 18px;
     background: #ffffff;
     box-sizing: border-box;
-  }
-  .card__textbox > * + *{
+}
+
+.card__textbox>*+* {
     margin-top: 10px;
-  }
-  .card__titletext{
+}
+
+.card__titletext {
     font-size: 20px;
     font-weight: bold;
     line-height: 125%;
-  }
-  .card__overviewtext{
+}
+
+.card__overviewtext {
     font-size: 12px;
     line-height: 150%;
-  }
+}
 
-  .card-skin{
+.card-skin {
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-    flex-basis: 33%;
-  }
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* footerのスタイル */
+footer {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

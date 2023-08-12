@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home.js';
 import Blog from './pages/blog.js';
+import BlogDetail from './pages/blog_detail.js';
 import Product from './pages/product.js';
 import Profile from './pages/profile.js';
 import Header from './components/header.js';
@@ -16,6 +17,7 @@ const router = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:id" element={<BlogDetail />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/profile" element={<Profile />} />
                 </Routes>
