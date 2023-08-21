@@ -1,32 +1,24 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Side from "../components/side.js";
 import * as contentful from "contentful";
 
-class Blog extends Component {
-  constructor(props) {
-    super(props);
+function Blog() {
+  const [items, setItems] = useState([]);
+  
+  const client = contentful.createClient({
+    space: "4n82yceld06j",
+    accessToken: "9K3bB5EpwtaiVEWsT4ajRwdnUD8ljhfWo0ONYe773BI",
+  });
 
-    this.state = {
-      items: [],
-    };
-
-    this.client = contentful.createClient({
-      space: "4n82yceld06j",
-      accessToken: "9K3bB5EpwtaiVEWsT4ajRwdnUD8ljhfWo0ONYe773BI",
-    });
-  }
-
-  componentDidMount() {
-    this.client.getEntries().then((response) => {
+  useEffect(() => {
+    client.getEntries().then((response) => {
       console.log(response.items);
-      this.setState({
-        items: response.items,
-      });
+      setItems(response.items);
     });
-  }
+  }, [client]);
 
-  truncateString = (str, maxLength) => {
+  const truncateString = (str, maxLength) => {
     if (str.length <= maxLength) {
       return str;
     } else {
@@ -34,31 +26,36 @@ class Blog extends Component {
     }
   };
 
-  render() {
-    return (
-      <div className="contents">
-        <div className="items">
-                {this.state.items.map((item, index) => (
-              console.log(item),
-            <Link to={{ pathname: `/blog/${item.sys.id}` }}>
-              <div key={index} className="card card-skin">
-                <div className="card__imgframe">
-                  <div className="card__textbox">
-                    <div className="card__titletext">{item.fields.title}</div>
-                    <p>{item.sys.updatedAt}</p>
-                    <div className="card__overviewtext">
-                      {this.truncateString(item.fields.body, 50)}
-                    </div>
+  return (
+    <div className="contents">
+      <div className="items">
+        {items.map((item, index) => (
+          <Link
+            to={{　pathname: `/blog/${item.sys.id}`　}}
+            state={{
+                title: item.fields.title || "タイトルが表示されておりません",
+                body: item.fields.body || "コンテンツが表示されておりません",
+                updatedAt: item.sys.updatedAt || "更新日時が表示されておりません",
+            }}
+            key={index}
+          >
+            <div className="card card-skin">
+              <div className="card__imgframe">
+                <div className="card__textbox">
+                  <div className="card__titletext">{item.fields.title}</div>
+                  <p>{item.sys.updatedAt}</p>
+                  <div className="card__overviewtext">
+                    {truncateString(item.fields.body, 50)}
                   </div>
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
-        <Side />
+            </div>
+          </Link>
+        ))}
       </div>
-    );
-  }
+      <Side />
+    </div>
+  );
 }
 
 export default Blog;

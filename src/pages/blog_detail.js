@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const blog_detail = () => {
-  return (
-    <div>blog_detail</div>
-  )
-}
+const BlogDetail = () => {
+    const location = useLocation();
+    const title = location.state?.title || 'タイトルがありません';
+    const body = location.state?.body || 'コンテンツがありません';
+    const updatedAt = location.state?.updatedAt || '更新日時が表示されておりません';
 
-export default blog_detail
+    return (
+        <>
+            <div>Title: {title}</div>
+            <div>Body: {body}</div>
+            <div>UpdatedAt: {updatedAt}</div>
+        </>
+    );
+};
+
+export default BlogDetail;
