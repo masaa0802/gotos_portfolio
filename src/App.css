@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* リセットCSS */
 * {
@@ -22,7 +25,7 @@ body {
 }
 
 /* headerのスタイル */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,17 +36,11 @@ header {
     top: 0;
     left: 0;
     right: 0;
-}
+} */
 
 h1 {
     font-size: 24px;
     font-weight: bold;
-}
-
-.header_title {
-    color: #ffffff;
-    text-decoration: none rgb(0, 0, 0);
-    padding-left: 30px;
 }
 
 .gnavi__pc-style nav {
@@ -116,23 +113,6 @@ h3 {
     flex-basis: 20%;
     border-left: groove;
     padding-left: 30px;
-  }
-  .about_img {
-    height: 120px;
-    width: 120px;
-    border-radius: 120px;
-    margin-left: 30px;
-  }
-  .Twitter{
-    padding: 10px;
-  }
-  .TwitterImg{
-    height: 30px;
-    width: 30px;
-    padding-right: 5px;
-  }
-  .TwitterName{
-    padding-right: 5px;
   }
 /* cardのスタイル */
 

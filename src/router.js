@@ -7,6 +7,7 @@ import Product from './pages/product.js';
 import Profile from './pages/profile.js';
 import Header from './components/header.js';
 import Footer from './components/footer.js'
+
 import './App.css';
 
 const router = () => {

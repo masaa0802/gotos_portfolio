@@ -3,10 +3,10 @@ import Side from "../components/side.js";
 
 const home = () => {
   return (
-    <>
-      <div>home</div>
+    <div className="contents">
+      <div className="items"></div>
       <Side />
-    </>
+    </div>
   );
 };
 
