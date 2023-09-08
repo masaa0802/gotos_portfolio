@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Side from "../components/side.js";
 
 const BlogDetail = () => {
   const location = useLocation();
@@ -13,12 +12,11 @@ const BlogDetail = () => {
     <div className="contents">
       <div className="items">
         <div className="title">
-          <h2>{title}</h2>
+          <h1>{title}</h1>
         </div>
-        <p className="updatedAt">更新日時: {updatedAt}</p>
+        <p className="pt-2">更新日時: {updatedAt}</p>
         <h3 className="body p-10">{body}</h3>
       </div>
-      <Side />
     </div>
   );
 };
