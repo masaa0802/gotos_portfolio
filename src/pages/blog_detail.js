@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import markdownit from 'markdown-it';
 
 const BlogDetail = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const BlogDetail = () => {
           <h1>{title}</h1>
         </div>
         <p className="pt-2">更新日時: {updatedAt}</p>
-        <h3 className="body p-10">{body}</h3>
+        <div dangerouslySetInnerHTML={{ __html: markdownit().render(body) }} />
       </div>
     </div>
   );
