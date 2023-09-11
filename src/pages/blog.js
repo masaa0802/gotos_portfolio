@@ -13,7 +13,6 @@ function Blog() {
 
   useEffect(() => {
     client.getEntries().then((response) => {
-      console.log(response.items);
       setItems(response.items);
     });
   }, [client]);
@@ -40,7 +39,7 @@ function Blog() {
             key={index}
           >
             <div className="card card-skin">
-              <div className="card__imgframe">
+              <div className="w-full" style={{ paddingTop: '56.25%', backgroundImage: 'url(https://kotonohaworks.com/free-icons/wp-content/uploads/kkrn_icon_blog_2.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', boxSizing: 'border-box', maxHeight: '350px' }} >
                 <div className="card__textbox">
                   <div className="card__titletext">{item.fields.title}</div>
                   <p>{item.sys.updatedAt}</p>

@@ -25,19 +25,6 @@ body {
 }
 
 /* headerのスタイル */
-/* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #000000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-} */
-
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -105,9 +92,6 @@ h3 {
     padding-top: 30px;
   }
   
-  .items {
-    flex-basis: 80%;
-  }
   /* sideのスタイル */
   .side {
     flex-basis: 20%;
@@ -122,20 +106,12 @@ h3 {
     gap: 3rem;
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 80%;
 }
 
 .card {
     width: 288px;
     height: auto;
-}
-
-.card__imgframe {
-    width: 100%;
-    padding-top: 56.25%;
-    /* background: url(https://placehold.jp/640x360.png) no-repeat center; */
-    background-size: cover;
-    box-sizing: border-box;
-    max-height: 350px;
 }
 
 .card__textbox {

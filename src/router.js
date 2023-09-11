@@ -4,6 +4,7 @@ import Home from './pages/home.js';
 import Blog from './pages/blog.js';
 import BlogDetail from './pages/blog_detail.js';
 import Product from './pages/product.js';
+import ProductDetail from './pages/product_detail.js';
 import Profile from './pages/profile.js';
 import Header from './components/header.js';
 import Footer from './components/footer.js'
@@ -20,6 +21,7 @@ const router = () => {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:id" element={<BlogDetail />} />
                     <Route path="/product" element={<Product />} />
+                    <Route path="/product/:id" element={<ProductDetail />} />
                     <Route path="/profile" element={<Profile />} />
                 </Routes>
             <Footer />
