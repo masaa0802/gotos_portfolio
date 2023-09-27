@@ -12,7 +12,7 @@ const ProductDetail = () => {
       <div className="items">
         <div className="title">
           <h2>{title}</h2>
-          <img src={image} alt = '画像が表示されていません' />
+          <img className="h-80" src={image} alt = '画像が表示されていません' />
         </div>
       </div>
       <Side />

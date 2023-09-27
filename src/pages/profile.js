@@ -16,10 +16,13 @@ const profile = () => {
           </a>
         </div>
         <div className="p-10">
-          <p className="p-5">2021年3月私立文系大学卒業　中国語専攻</p>
-          <p className="p-5">2021年9月プログラミングスクール受講</p>
-          <p className="p-5">2022年3月都内IT企業入社（SES企業）</p>
-          <p className="p-5">2023年10月都内IT企業転職（自社開発企業）</p>
+          <p className="p-5">2021年3月 私立文系大学卒業　中国語専攻</p>
+          <h2 className="text-center">↓</h2>
+          <p className="p-5">2021年9月 プログラミングスクール受講</p>
+          <h2 className="text-center">↓</h2>
+          <p className="p-5">2022年3月 都内IT企業入社（SES企業）</p>
+          <h2 className="text-center">↓</h2>
+          <p className="p-5">2023年10月 都内IT企業転職（自社開発企業）</p>
         </div>
     </div>
     <div className="flex justify-center">
