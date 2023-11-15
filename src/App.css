@@ -96,12 +96,12 @@ h3 {
   .side {
     flex-basis: 20%;
     border-left: groove;
-    padding-left: 30px;
+    padding-left: 20px;
   }
 /* cardのスタイル */
 
 .items {
-    padding-left: 60px;
+    padding: 0 100px;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 3rem;
     display: flex;
