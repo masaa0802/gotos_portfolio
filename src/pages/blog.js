@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Side from "../components/side.js";
 import * as contentful from "contentful";
+import dayjs from "dayjs";
 
 function Blog() {
   const [items, setItems] = useState([]);  
@@ -13,7 +13,6 @@ function Blog() {
   useEffect(() => {
     client.getEntries().then((response) => {
       setItems(response.items);
-      console.log(response);
     });
   }, [client]);
 
@@ -24,6 +23,13 @@ function Blog() {
       return str.substring(0, maxLength) + "...";
     }
   };
+
+  const truncateDate = (date) => {
+    const updatedAt = date;
+    const object = new Date(updatedAt);
+    const result = dayjs(object).format('YYYY年MM月DD日');
+    return result;
+  }
 
   return (
     <div className="contents">
@@ -43,7 +49,7 @@ function Blog() {
               <div className="w-full" style={{ paddingTop: '56.25%', backgroundImage: 'url(https://kotonohaworks.com/free-icons/wp-content/uploads/kkrn_icon_blog_2.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', boxSizing: 'border-box', maxHeight: '350px' }} >
                 <div className="card__textbox">
                   <div className="card__titletext">{item.fields.title}</div>
-                  <p>{item.sys.updatedAt }</p>
+                  <p>{truncateDate(item.sys.updatedAt) }</p>
                   <div className="card__overviewtext">
                     {truncateString(item.fields.body, 50)}
                   </div>
@@ -53,7 +59,6 @@ function Blog() {
           </Link>
         ))}
       </div>
-      <Side />
     </div>
   );
 }

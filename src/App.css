@@ -96,7 +96,10 @@ h3 {
   .side {
     flex-basis: 20%;
     border-left: groove;
-    padding-left: 20px;
+  }
+  .profile_image{
+    display: flex;
+    justify-content: center;
   }
 /* cardのスタイル */
 
@@ -109,6 +112,14 @@ h3 {
     flex-basis: 80%;
 }
 
+.blog_items{
+    padding: 0 150px;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 80%;
+}
 .card {
     width: 288px;
     height: auto;

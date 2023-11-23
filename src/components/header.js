@@ -8,13 +8,13 @@ const header = () => {
         <div>
             <NavLink to="/" className="text-white no-underline pl-30" ><h1>GOTO's PORTFOLIO</h1><p className="text-center">ーエンジニアの部屋ー</p></NavLink>
         </div>
-        <nav className="gnavi__pc-style">
+        {/* <nav className="gnavi__pc-style">
           <ul>
             <li><NavLink to="/product" className="product" >開発物</NavLink></li>
             <li><NavLink to="/blog" className="list" >ブログ</NavLink></li>
             <li><NavLink to="/profile" className="profile" >プロフィール</NavLink></li>
           </ul>
-        </nav>
+        </nav> */}
       </header>
     </div>
   )
