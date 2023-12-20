@@ -89,7 +89,7 @@ h3 {
 .contents {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 20px;
   }
   
   /* sideのスタイル */
@@ -103,6 +103,19 @@ h3 {
   }
 /* cardのスタイル */
 
+.title {
+  font-size: 30px;
+}
+
+.image {
+  padding: 30px;
+}
+
+.text-body{
+  padding: 30px;
+  font-size: 20px;
+}
+
 .items {
     padding: 0 100px;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -113,12 +126,16 @@ h3 {
 }
 
 .blog_items{
-    padding: 0 150px;
+    padding: 60px;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 80%;
+    display: block;
+    margin: 30px 70px;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-weight: bold;
+    border: solid 3px #000000;
+    border-radius: 20px;
 }
 .card {
     width: 288px;
@@ -131,6 +148,10 @@ h3 {
     padding: 20px 18px;
     background: #ffffff;
     box-sizing: border-box;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px #000000;
+    border-radius: 20px;
 }
 
 .card__textbox>*+* {

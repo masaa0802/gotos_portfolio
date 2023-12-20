@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import markdownit from 'markdown-it';
-import Side from "../components/side.js";
 import dayjs from "dayjs";
 
 const BlogDetail = () => {
@@ -16,16 +15,15 @@ const BlogDetail = () => {
   return (
     <div className="contents">
       <div className="blog_items">
-        <div className="title">
-          <h1>{title}</h1>
+      <p className="pt-2">{date}</p>
+        <div>
+          <p className="title">{title}</p>
         </div>
         <div className="image">
           <img src={image.fields.file.url} alt="aaa" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
         </div>
-        <p className="pt-2">更新日時: {date}</p>
-        <div dangerouslySetInnerHTML={{ __html: markdownit().render(body) }} />
+        <div className="text-body" dangerouslySetInnerHTML={{ __html: markdownit().render(body) }} />
       </div>
-      <Side />
     </div>
   );
 };
