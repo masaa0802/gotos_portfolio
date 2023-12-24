@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import markdownit from 'markdown-it';
+import { marked } from 'marked'
 import dayjs from "dayjs";
 
 const BlogDetail = () => {
@@ -12,6 +12,14 @@ const BlogDetail = () => {
   const object = new Date(updatedAt)
   const date = dayjs(object).format('YYYY年MM月DD日')
 
+  const source = body.replace(/\n/gi, '\nreplaced_text ');
+
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+  });
+  const parsedSource = marked(source).replace(/replaced_text/g, '');
+
   return (
     <div className="contents">
       <div className="blog_items">
@@ -20,9 +28,9 @@ const BlogDetail = () => {
           <p className="title">{title}</p>
         </div>
         <div className="image">
-          <img src={image.fields.file.url} alt="aaa" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
+          <img className="blog_img" src={image.fields.file.url} alt="blog" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
         </div>
-        <div className="text-body" dangerouslySetInnerHTML={{ __html: markdownit().render(body) }} />
+        <div className="text-body" dangerouslySetInnerHTML={{ __html: marked(parsedSource) }} />
       </div>
     </div>
   );
