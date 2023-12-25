@@ -149,12 +149,11 @@ h3 {
 }
 
 .card__textbox {
-  width: 100%;
+  width: 800px;
   height: auto;
   padding: 20px 18px;
   background: #ffffff;
   box-sizing: border-box;
-  margin: 2em 0;
   font-weight: bold;
   border: solid 3px #000000;
   border-radius: 20px;
@@ -165,7 +164,7 @@ h3 {
 }
 
 .card__titletext {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 125%;
 }

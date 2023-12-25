@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { marked } from 'marked'
+import { marked } from 'marked';
 import dayjs from "dayjs";
 
 const BlogDetail = () => {
