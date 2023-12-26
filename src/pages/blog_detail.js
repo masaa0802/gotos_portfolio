@@ -8,11 +8,12 @@ const BlogDetail = () => {
   const title = location.state?.title || "タイトルがありません";
   const image = location.state?.image || "画像がありません";
   const body = location.state?.body || "コンテンツがありません";
-  const updatedAt = location.state?.updatedAt || "更新日時が表示されておりません";
-  const object = new Date(updatedAt)
+  const createdAt = location.state?.createdAt || "更新日時が表示されておりません";
+  const object = new Date(createdAt)
   const date = dayjs(object).format('YYYY年MM月DD日')
 
   const source = body.replace(/\n/gi, '\nreplaced_text ');
+  console.log(source);
 
   marked.setOptions({
     gfm: true,

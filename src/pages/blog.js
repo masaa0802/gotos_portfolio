@@ -25,8 +25,8 @@ function Blog() {
   };
 
   const truncateDate = (date) => {
-    const updatedAt = date;
-    const object = new Date(updatedAt);
+    const createdAt = date;
+    const object = new Date(createdAt);
     const result = dayjs(object).format('YYYY年MM月DD日');
     return result;
   }
@@ -41,7 +41,7 @@ function Blog() {
                 title: item.fields.title || "タイトルが表示されておりません",
                 body: item.fields.body || "コンテンツが表示されておりません",
                 image: item.fields.image || "画像が表示されません",
-                updatedAt: item.sys.updatedAt || "更新日時が表示されておりません",
+                createdAt: item.sys.createdAt || "更新日時が表示されておりません",
             }}
             key={index}
           >
@@ -49,9 +49,9 @@ function Blog() {
               <div className="w-full" >
                 <div className="card__textbox">
                   <div className="card__titletext">{item.fields.title}</div>
-                  <p>{truncateDate(item.sys.updatedAt) }</p>
+                  <p>{truncateDate(item.sys.createdAt) }</p>
                   <div className="card__overviewtext">
-                    {truncateString(item.fields.body, 50)}
+                    {truncateString(item.fields.description, 50)}
                   </div>
                 </div>
               </div>
