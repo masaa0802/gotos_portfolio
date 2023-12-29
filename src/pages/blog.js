@@ -11,7 +11,11 @@ function Blog() {
   });
 
   useEffect(() => {
-    client.getEntries().then((response) => {
+    client.getEntries({
+      content_type: 'blogPost',
+      limit: 200,
+      order: '-sys.createdAt'
+    }).then((response) => {
       setItems(response.items);
     });
   }, [client]);
