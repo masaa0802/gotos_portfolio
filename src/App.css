@@ -122,6 +122,10 @@ h3 {
   font-size: 20px;
 }
 
+.text-body p{
+  margin: 20px;
+}
+
 .items {
   padding: 0 100px;
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -140,7 +144,6 @@ h3 {
   margin: 30px 70px;
   background: #ffffff;
   box-sizing: border-box;
-  font-weight: bold;
   border: solid 3px #000000;
   border-radius: 20px;
 }

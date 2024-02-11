@@ -9,17 +9,18 @@ const BlogDetail = () => {
   const image = location.state?.image || "画像がありません";
   const body = location.state?.body || "コンテンツがありません";
   const createdAt = location.state?.createdAt || "更新日時が表示されておりません";
-  const object = new Date(createdAt)
-  const date = dayjs(object).format('YYYY年MM月DD日')
+  const object = new Date(createdAt);
+  const date = dayjs(object).format('YYYY年MM月DD日');
 
-  const source = body.replace(/\n/gi, '\nreplaced_text ');
-  console.log(source);
+  const source = body.replace(/\n/g, '\n\n'); 
+  const parsedSource = marked(source);
+
+  console.log(parsedSource);
 
   marked.setOptions({
     gfm: true,
     breaks: true,
   });
-  const parsedSource = marked(source).replace(/replaced_text/g, '');
 
   return (
     <div className="contents">
@@ -31,7 +32,7 @@ const BlogDetail = () => {
         <div className="image">
           <img className="blog_img" src={image.fields.file.url} alt="blog" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
         </div>
-        <div className="text-body" dangerouslySetInnerHTML={{ __html: marked(parsedSource) }} />
+        <div className="text-body" dangerouslySetInnerHTML={{ __html: parsedSource }} />
       </div>
     </div>
   );
