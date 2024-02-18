@@ -15,8 +15,6 @@ const BlogDetail = () => {
   const source = body.replace(/\n/g, '\n\n'); 
   const parsedSource = marked(source);
 
-  console.log(parsedSource);
-
   marked.setOptions({
     gfm: true,
     breaks: true,
@@ -27,7 +25,7 @@ const BlogDetail = () => {
       <div className="blog_items">
       <p className="pt-2">{date}</p>
         <div>
-          <p className="title">{title}</p>
+          <h1 className="title">{title}</h1>
         </div>
         <div className="image">
           <img className="blog_img" src={image.fields.file.url} alt="blog" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
