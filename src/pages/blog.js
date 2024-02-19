@@ -53,7 +53,7 @@ function Blog() {
               <div className="w-full" >
                 <div className="card__textbox">
                   <div className="card__titletext">{item.fields.title}</div>
-                  <p>{truncateDate(item.sys.createdAt)}</p>
+                  <p className="card__titletext_createdAt">{truncateDate(item.sys.createdAt)}</p>
                   <div className="card__overviewtext">
                     {truncateString(item.fields.description, 50)}
                   </div>

@@ -164,6 +164,12 @@ section {
   line-height: 125%;
 }
 
+.card__titletext_createdAt{
+  border-bottom: 2px;
+  border-style: solid;
+  width: 20%;
+}
+
 .card__overviewtext {
   font-size: 12px;
   line-height: 150%;
