@@ -5,7 +5,7 @@ const side = () => {
   return (
     <div className="side">
       <div className="about">
-        <h2 className="pl-4">プロフィール</h2>
+        <h3 className="p-4"><strong>プロフィール</strong></h3>
         <div className="profile_image"><img className="h-24 rounded-full" src={Img} alt="profile_image" /></div>
         <p className="text-center pt-5"><strong>GOTO</strong><br /></p>
         <a href="https://twitter.com/mg10313273">
