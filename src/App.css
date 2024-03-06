@@ -27,6 +27,11 @@ body {
 h2 {
   font-size : 25px;
   font-weight: bold;
+  border: #000000;
+  border-style:dotted;
+  border-width: 0 0 2px 0;
+  padding-bottom: 10px;
+  /* width: 50%; */
 }
 
 /* headerのスタイル */
