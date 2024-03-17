@@ -31,7 +31,16 @@ h2 {
   border-style:dotted;
   border-width: 0 0 2px 0;
   padding-bottom: 10px;
-  /* width: 50%; */
+}
+
+h3{
+  font-size : 20px;
+  font-weight: bold;
+}
+
+img {
+  margin: auto;
+  display: block;
 }
 
 /* headerのスタイル */
@@ -139,11 +148,11 @@ section {
 
 .blog_items {
   padding: 60px;
-  width: 1200px;
+  width: 1000px;
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 3rem;
   display: block;
-  margin: 30px 70px;
+  margin: auto;
   background: #ffffff;
   box-sizing: border-box;
   border: solid 3px #000000;
