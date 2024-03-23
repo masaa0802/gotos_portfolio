@@ -6,8 +6,8 @@ import dayjs from "dayjs";
 function Blog() {
   const [items, setItems] = useState([]);
   const client = contentful.createClient({
-    space: process.env.REACT_APP_SPACE_ID,
-    accessToken: process.env.REACT_APP_CDA_ACCESS_TOKEN
+    space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.REACT_APP_CONTENTFUL_DELIVERY_API
   });
 
   useEffect(() => {
