@@ -12,7 +12,7 @@ const BlogDetail = () => {
   const object = new Date(createdAt);
   const date = dayjs(object).format('YYYY年MM月DD日');
 
-  const source = body.replace(/\n/g, '\n\n'); 
+  const source = body.replace(/\n/g, '\n\n');
   const parsedSource = marked(source);
 
   marked.setOptions({
@@ -23,9 +23,9 @@ const BlogDetail = () => {
   return (
     <div className="contents">
       <div className="blog_items">
-      <p className="pt-2">{date}</p>
+        <p className="pl-10 pt-2">{date}</p>
         <div>
-          <h1 className="title">{title}</h1>
+          <h1 className="pl-10 title">{title}</h1>
         </div>
         <div className="image">
           <img className="blog_img" src={image.fields.file.url} alt="blog" height={image.fields.file.details.image.height} width={image.fields.file.details.image.width} />
