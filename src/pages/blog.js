@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import * as contentful from "contentful";
 import dayjs from "dayjs";
 
-function Blog() {
+const Blog = () => {
   const [items, setItems] = useState([]);
   const client = contentful.createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,

@@ -8,10 +8,9 @@ import ProductDetail from './pages/product_detail.js';
 import Profile from './pages/profile.js';
 import Header from './components/header.js';
 import Footer from './components/footer.js'
-
 import './App.css';
 
-const router = () => {
+const Router = () => {
     return (
         <div>
             <BrowserRouter>
@@ -30,4 +29,4 @@ const router = () => {
     )
 }
 
-export default router
+export default Router

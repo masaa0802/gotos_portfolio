@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "../img/profile.png";
 
-const profile = () => {
+const Profile = () => {
   return (
     <div>
       <div className="flex justify-center p-5">
@@ -25,10 +25,10 @@ const profile = () => {
     <div className="flex justify-center">
       <p>私立大学文系卒で、大学時代は１年間中国の浙江省杭州市へ留学しており、そこでフィンテックに興味を持ち、エンジニアを志すようになりました。<br/>
       プログラミングスクール卒業し、都内IT企業でSESとして3つの案件。言語は主にPHPとPythonになります。<br/>
-      最近はVue×Laravelで個人開発やReact学習、Flutter学習、FlutterFlow開発などに尽力しています。</p>
+      最近はReact x Rubyで個人開発、Flutter学習、FlutterFlow開発などに尽力しています。</p>
     </div>
     </div>
   )
 }
 
-export default profile
+export default Profile

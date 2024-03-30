@@ -2,7 +2,7 @@ import React from "react";
 import Side from "../components/side.js";
 import Blog from "./blog.js";
 
-const home = () => {
+const Home = () => {
   return (
     <div className="contents">
       <div style={{ flexBasis: '80%' }} >
@@ -13,4 +13,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
