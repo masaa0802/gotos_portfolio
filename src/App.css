@@ -36,6 +36,7 @@ h2 {
 h3{
   font-size : 20px;
   font-weight: bold;
+  margin: 15px;
 }
 
 img {
@@ -134,7 +135,7 @@ section {
 }
 
 .text-body p{
-  margin: 20px;
+  margin: 15px;
 }
 
 .items {
