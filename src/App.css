@@ -259,6 +259,11 @@ footer {
     flex-basis: 100%;
   }
 
+  .text-body p{
+    margin: 15px;
+    font-size: medium;
+  }
+
   .items, .blog_items {
     padding: 0px;
     width: auto;
