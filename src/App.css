@@ -217,3 +217,49 @@ footer {
   left: 0;
   right: 0;
 }
+
+/* スマホサイズのレスポンシブ対応 */
+@media (max-width: 600px) {
+  body {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .gnavi__pc-style ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .gnavi__pc-style li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  main {
+    margin: 40px 20px;
+    max-width: 100%;
+  }
+
+  .side {
+    flex-basis: 100%;
+    border-left: none;
+    border-top: groove;
+  }
+
+  .items, .blog_items {
+    padding: 20px;
+    width: auto;
+  }
+
+  .card__textbox {
+    width: auto;
+  }
+
+  footer {
+    position: relative;
+  }
+}
