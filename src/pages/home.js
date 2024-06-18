@@ -5,7 +5,7 @@ import Blog from "./blog.js";
 const Home = () => {
   return (
     <div className="contents">
-      <div style={{ flexBasis: '80%' }} >
+      <div className="home" >
           <Blog />
       </div>
       <Side />

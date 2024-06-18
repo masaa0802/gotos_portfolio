@@ -44,6 +44,11 @@ img {
   display: block;
 }
 
+/* home */
+.home{
+  flex-basis: 80%;
+}
+
 /* headerのスタイル */
 .kurosuke-img{
   position: absolute;
@@ -222,7 +227,7 @@ footer {
 @media (max-width: 600px) {
   body {
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
 
   .header-title {
@@ -250,13 +255,28 @@ footer {
     border-top: groove;
   }
 
+  .home{
+    flex-basis: 100%;
+  }
+
   .items, .blog_items {
     padding: 20px;
     width: auto;
+    text-align: center;
   }
 
   .card__textbox {
     width: auto;
+  }
+
+  .card__titletext_createdAt{
+    border-bottom: 2px;
+    border-style: solid;
+    width: unset;
+  }
+
+  .contents{
+    justify-content: space-around;
   }
 
   footer {
