@@ -260,9 +260,9 @@ footer {
   }
 
   .items, .blog_items {
-    padding: 20px;
+    padding: 0px;
     width: auto;
-    text-align: center;
+    margin: 20px;
   }
 
   .card__textbox {
