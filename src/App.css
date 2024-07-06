@@ -121,6 +121,11 @@ section {
 .title {
   font-size: 30px;
   font-weight: bold;
+  padding-left: 30px;
+}
+
+.date {
+  padding-top: 30px;
 }
 
 .image {
@@ -225,6 +230,15 @@ footer {
 
 /* スマホサイズのレスポンシブ対応 */
 @media (max-width: 600px) {
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
   body {
     padding-top: 50px;
     padding-bottom: 0px;
@@ -247,6 +261,13 @@ footer {
   main {
     margin: 40px 20px;
     max-width: 100%;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 0px;
+    text-align: center;
   }
 
   .side {
@@ -282,6 +303,7 @@ footer {
 
   .contents{
     justify-content: space-around;
+    padding-top: 25px;
   }
 
   footer {
