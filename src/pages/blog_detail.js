@@ -19,7 +19,7 @@ const BlogDetail = () => {
     gfm: true,
     breaks: true,
   });
-
+  
   return (
     <div className="contents">
       <div className="blog_items">
